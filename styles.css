@@ -1,0 +1,61 @@
+:root{
+    --bg:        #F4EEDF;   /* Fondo base: crema del contenedor */
+    --brand:     #6E2A25;   /* Acento de marca: burdeo del letrero "Vientos" */
+    --ink:       #211D1A;   /* Estructura: negro cálido del muro del lounge */
+    --wood:      #8B5E3C;   /* Estructura secundaria: madera cálida */
+    --copper:    #B9834F;   /* Detalle cálido: cobre/utensilios */
+    --bg-panel:  #ECE3D0;
+    --line: rgba(33,29,26,0.12);
+  }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{ background:var(--bg); color:var(--ink); font-family:'Jost',sans-serif; }
+  .serif{ font-family:'Cormorant Garamond',serif; }
+  .tracker{ letter-spacing:.18em; }
+  .tracker-lg{ letter-spacing:.28em; }
+
+  #site-header{ background-color: rgba(244,238,223,0.94); backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line); }
+
+  /* ===================== TAB PANELS (SPA) ===================== */
+  .tab-panel{ display:none; animation:fadeInPanel .5s ease; }
+  .tab-panel.active{ display:block; }
+  @keyframes fadeInPanel{ from{ opacity:0; transform:translateY(10px); } to{ opacity:1; transform:none; } }
+
+  .nav-link{ position:relative; background:none; border:none; font-family:inherit; cursor:pointer; opacity:.8; transition:opacity .2s ease, color .2s ease; padding:6px 0; }
+  .nav-link::after{ content:''; position:absolute; left:0; bottom:-4px; width:0; height:1px; background:currentColor; transition:width .3s ease; }
+  .nav-link:hover{ opacity:1; }
+  .nav-link:hover::after{ width:100%; }
+  .nav-link.active{ opacity:1; color:var(--brand); }
+  .nav-link.active::after{ width:100%; }
+
+  .menu-toggle{ color:var(--ink); }
+  .main-nav.open{
+    display:flex !important; position:fixed; top:70px; left:0; right:0; z-index:39;
+    background:var(--bg); flex-direction:column; align-items:flex-start; gap:0;
+    padding:8px 0; box-shadow:0 1px 0 var(--line);
+  }
+  .main-nav.open .nav-link{ width:100%; padding:16px 24px; border-top:1px solid var(--line); }
+  .main-nav.open .nav-link.active::after{ display:none; }
+
+  .btn-primary{ background:var(--brand); color:var(--bg); transition: filter .25s ease, transform .2s ease; }
+  .btn-primary:hover{ filter:brightness(1.12); transform: translateY(-1px); }
+  .btn-outline{ border:1px solid currentColor; transition: background-color .25s ease, color .25s ease; }
+  .btn-outline:hover{ background: var(--ink); color: var(--bg); }
+
+  .fade-up{ opacity:0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+  .fade-up.in{ opacity:1; transform: translateY(0); }
+
+  .cat-btn{ border:1px solid var(--line); color:var(--wood); transition:all .25s ease; }
+  .cat-btn.active, .cat-btn:hover{ background:var(--brand); color:var(--bg); border-color:var(--brand); }
+
+  .card-item{ border-top:1px solid var(--line); transition: background-color .25s ease; cursor:pointer; }
+  .card-item:hover{ background: rgba(110,42,37,0.05); }
+
+  #product-modal, #cart-drawer, #cart-overlay{ transition: opacity .3s ease, visibility .3s ease; }
+  #cart-drawer{ transition: transform .4s cubic-bezier(.16,1,.3,1); }
+
+  ::-webkit-scrollbar{ width:8px; }
+  ::-webkit-scrollbar-thumb{ background: var(--wood); border-radius:4px; }
+  input[type="radio"]{ accent-color: var(--brand); }
+
+  :focus-visible{ outline: 2px solid var(--brand); outline-offset: 2px; }
