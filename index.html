@@ -23,19 +23,9 @@
 <header id="site-header" class="fixed top-0 left-0 w-full z-40">
   <div class="max-w-7xl mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
     <a href="#" class="flex items-center gap-3" data-tab="inicio">
-      <!-- Isotipo firma: recreación lineal del logo real tallado en madera (rosa de los vientos con alas) -->
-      <svg width="38" height="38" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="46" stroke="var(--bg)" stroke-width="1.3"/>
-        <path d="M50 12 L54 46 L50 50 L46 46 Z" stroke="var(--bg)" stroke-width="1.1"/>
-        <path d="M50 88 L54 54 L50 50 L46 54 Z" stroke="var(--bg)" stroke-width="1.1"/>
-        <path d="M12 50 L46 46 L50 50 L46 54 Z" stroke="var(--bg)" stroke-width="1.1"/>
-        <path d="M88 50 L54 46 L50 50 L54 54 Z" stroke="var(--bg)" stroke-width="1.1"/>
-        <circle cx="50" cy="50" r="5" stroke="var(--bg)" stroke-width="1.1"/>
-        <path d="M30 30 C40 34, 44 40, 42 48" stroke="var(--bg)" stroke-width="1" fill="none"/>
-        <path d="M70 30 C60 34, 56 40, 58 48" stroke="var(--bg)" stroke-width="1" fill="none"/>
-        <path d="M30 70 C40 66, 44 60, 42 52" stroke="var(--bg)" stroke-width="1" fill="none"/>
-        <path d="M70 70 C60 66, 56 60, 58 52" stroke="var(--bg)" stroke-width="1" fill="none"/>
-      </svg>
+      <span class="w-[38px] h-[38px] rounded-full overflow-hidden inline-flex shrink-0">
+        <img src="logo.jpg" alt="Logo de Vientos Café" class="w-full h-full object-cover">
+      </span>
       <span class="serif italic text-3xl leading-none" style="color:var(--copper)">Vientos</span>
     </a>
 
@@ -172,7 +162,7 @@
 
 <!-- ======================= PRUEBA SOCIAL ======================= -->
 <section id="tab-resenas" class="tab-panel" data-tab-panel="resenas">
-<section class="py-20 md:py-28 px-6 md:px-10 max-w-4xl mx-auto text-center">
+<section class="py-20 md:py-28 px-6 md:px-10 max-w-5xl mx-auto text-center">
   <div class="fade-up">
     <div class="flex justify-center gap-1 mb-6" aria-label="5.0 de 5 estrellas">
       <span class="serif text-2xl" style="color:var(--copper)">★★★★★</span>
@@ -191,7 +181,7 @@
     </div>
   </div>
 
-  <div class="grid sm:grid-cols-2 gap-6 mt-14 text-left">
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-14 text-left">
     <div class="fade-up p-8 rounded-xl" style="background:var(--bg-panel)">
       <div class="mb-4" style="color:var(--copper)">★★★★★</div>
       <p class="text-sm leading-relaxed mb-5" style="color:var(--wood)">"Una encantadora cafetería en la terraza de un centro comercial, ideal para una pausa relajante. Con su famoso mocka menta, chocolates con marshmallow y exquisitos pasteles artesanales, es el lugar perfecto para disfrutar de una experiencia única. Además, sus refrescantes limonadas son la opción ideal para los días de calor."</p>
@@ -201,6 +191,11 @@
       <div class="mb-4" style="color:var(--copper)">★★★★★</div>
       <p class="text-sm leading-relaxed mb-5" style="color:var(--wood)">"Voy frecuentemente con mi pareja, lo tenemos como un lugar para consentirnos con un rico café. La verdad que el café es muy bueno, diría que mucho mejor que lugares famosos. Se siente la calidad del grano. Los postres también son buenos así que si vas cualquier cosa que decidas comer es rica. Buenos precios también."</p>
       <p class="text-[11px] tracker uppercase" style="color:var(--brand)">Rocío Mujica Yáñez · Local Guide, Google Maps</p>
+    </div>
+    <div class="fade-up p-8 rounded-xl" style="background:var(--bg-panel)">
+      <div class="mb-4" style="color:var(--copper)">★★★★★</div>
+      <p class="text-sm leading-relaxed mb-5" style="color:var(--wood)">"Excelente atención! Además de un ambiente excepcional en el cual puedes tomarte un tiempo para disfrutar y relajarte con una buena taza de café, el servicio es muy agradable y la cantidad exacta de cada producto es perfecta, me agradó bastante y espero que sigan creciendo y expandiéndose con esa esencia que los caracteriza, totalmente recomendable!"</p>
+      <p class="text-[11px] tracker uppercase" style="color:var(--brand)">Max Zapata · Google Maps</p>
     </div>
   </div>
 
@@ -291,19 +286,21 @@
 </main>
 
 <!-- ======================= FOOTER ======================= -->
-<footer class="py-12 px-6 md:px-10 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-10 text-[11px] tracker">
-  <div class="max-w-xs">
-    <span class="serif italic text-xl normal-case tracker-normal block mb-2" style="color:var(--brand)">Vientos Café</span>
-    <p class="serif italic normal-case tracker-normal text-sm" style="color:var(--wood)">Tu cafetería de confianza en el lugar de paso más tranquilo.</p>
-  </div>
-  <div>
-    <span class="uppercase opacity-50 block mb-3">Contacto</span>
-    <div class="flex flex-col gap-2 uppercase">
-      <a href="https://instagram.com/vientos.cafe" target="_blank" rel="noopener" class="nav-link">Instagram — @vientos.cafe</a>
-      <a href="https://wa.me/56975710076" target="_blank" rel="noopener" class="nav-link">WhatsApp</a>
+<footer class="py-12 px-6 md:px-10" style="background:var(--ink); color:var(--bg)">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-10 text-[11px] tracker">
+    <div class="max-w-xs">
+      <span class="serif italic text-xl normal-case tracker-normal block mb-2" style="color:var(--copper)">Vientos Café</span>
+      <p class="serif italic normal-case tracker-normal text-sm opacity-70">Tu cafetería de confianza en el lugar de paso más tranquilo.</p>
     </div>
+    <div class="rounded-xl px-6 py-5" style="border:1px solid rgba(244,238,223,0.18); background:rgba(244,238,223,0.04)">
+      <span class="uppercase opacity-50 block mb-3">Contacto</span>
+      <div class="flex flex-col gap-2 uppercase">
+        <a href="https://instagram.com/vientos.cafe" target="_blank" rel="noopener" class="nav-link">Instagram — @vientos.cafe</a>
+        <a href="https://wa.me/56975710076" target="_blank" rel="noopener" class="nav-link">WhatsApp</a>
+      </div>
+    </div>
+    <span class="uppercase opacity-50 normal-case tracker-normal">Capellán Florencio Infante 3330<br/>Maipú, Región Metropolitana</span>
   </div>
-  <span class="uppercase opacity-50 normal-case tracker-normal">Capellán Florencio Infante 3330<br/>Maipú, Región Metropolitana</span>
 </footer>
 
 <!-- ======================= MODAL PRODUCTO ======================= -->
