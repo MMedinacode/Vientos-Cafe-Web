@@ -3,9 +3,10 @@
    ============================================================ */
 
 // HORARIO DE EJEMPLO — Google Maps solo confirmó apertura a las 9:30 a.m., sin horario semanal completo.
+// Horario real confirmado vía Google Maps (ficha "Vientos café").
 const HOURS = {
-  0: [[9.5,19]], 1:[[9.5,19]], 2:[[9.5,19]], 3:[[9.5,19]],
-  4:[[9.5,19]], 5:[[9.5,19]], 6:[[9.5,19]]
+  0: [[9.5,21]], 1: [], 2: [[8.25,21]], 3: [[8.25,21]],
+  4: [[8.25,21]], 5: [[8.25,21]], 6: [[9.5,21]]
 };
 
 // Teléfono real confirmado vía Google Maps.
